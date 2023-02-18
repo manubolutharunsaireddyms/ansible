@@ -1,11 +1,13 @@
 ---
 - hosts: all
   become: yes
+  gather_facts: yes
   tasks:
   - name: Install Web Server
     apt:
       name: apache2
       state: present
+    when: ansible_os_family=="Debian"
   - name : Start web Server
     service:
       name: apache2
