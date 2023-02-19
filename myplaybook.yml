@@ -1,5 +1,4 @@
 ---
-  tasks:
   - name: Install Web Server
     apt:
       name: apache2
