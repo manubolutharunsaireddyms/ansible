@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: 172.31.37.214
   become: yes
   gather_facts: yes
   tasks:
@@ -10,5 +10,5 @@
     when: ansible_os_family=="Debian"
   - name : Start web Server
     service:
-      name: apache2
+      name: "{{myweb}}"
       state: started
