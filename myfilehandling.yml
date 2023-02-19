@@ -7,3 +7,8 @@
       path: /home/ubuntu/testfile
       state: touch
   - include_tasks: myplaybook.yml
+  - name: Copy File From Ansible Master to Node
+    copy:
+      src: mystaticfile
+      dest: /home/ubuntu/mystaticfile
+      
