@@ -6,5 +6,5 @@
     when: ansible_os_family=="Debian"
   - name : Start web Server
     service:
-      name: "{{myweb}}"
+      name: apache2
       state: started
